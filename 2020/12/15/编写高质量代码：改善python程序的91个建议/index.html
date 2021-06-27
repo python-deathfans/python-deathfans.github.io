@@ -1,0 +1,537 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.3.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.3.0" type="image/png" sizes="32x32"><meta name="description" content="本篇内容记录学习《编写高质量代码，改善python程序的91个建议》。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编写高质量代码：改善python程序的91个建议">
+<meta property="og:url" content="http://nbuyy515.top/2020/12/15/%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E5%96%84python%E7%A8%8B%E5%BA%8F%E7%9A%8491%E4%B8%AA%E5%BB%BA%E8%AE%AE/index.html">
+<meta property="og:site_name" content="摆渡人">
+<meta property="og:description" content="本篇内容记录学习《编写高质量代码，改善python程序的91个建议》。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.downk.cc/item/5fdabbbf3ffa7d37b3126c51.png">
+<meta property="article:published_time" content="2020-12-15T10:38:53.000Z">
+<meta property="article:modified_time" content="2020-12-19T13:12:47.274Z">
+<meta property="article:author" content="摆渡人">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.downk.cc/item/5fdabbbf3ffa7d37b3126c51.png"><title>编写高质量代码：改善python程序的91个建议 | 摆渡人</title><link ref="canonical" href="http://nbuyy515.top/2020/12/15/%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E5%96%84python%E7%A8%8B%E5%BA%8F%E7%9A%8491%E4%B8%AA%E5%BB%BA%E8%AE%AE/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.3.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: ["google","bing","baidu"],
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/阅读/"><span class="header-nav-menu-item__text">阅读</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/理财/"><span class="header-nav-menu-item__text">理财</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/生活经济学"><span class="header-nav-menu-item__text">生活经济学</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/数据分析/"><span class="header-nav-menu-item__text">数据分析</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/python/"><span class="header-nav-menu-item__text">python</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/随笔/"><span class="header-nav-menu-item__text">随笔</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/日记"><span class="header-nav-menu-item__text">日记</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner" style="background: url(https://pic.downk.cc/item/5fd893823ffa7d37b3fb167e.gif) no-repeat center/cover;"><div class="header-banner-info"><div class="header-banner-info__title">摆渡人</div><div class="header-banner-info__subtitle">渡人不渡己</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">编写高质量代码：改善python程序的91个建议</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-12-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-12-19</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.1k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">12分</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/12/15/%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E5%96%84python%E7%A8%8B%E5%BA%8F%E7%9A%8491%E4%B8%AA%E5%BB%BA%E8%AE%AE/" data-flag-title="编写高质量代码：改善python程序的91个建议"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p>本篇内容记录学习《编写高质量代码，改善python程序的91个建议》。</p>
+<span id="more"></span>
+
+
+        <h2 id="1、字符串格式化"   >
+          <a href="#1、字符串格式化" class="heading-link"><i class="fas fa-link"></i></a>1、字符串格式化</h2>
+      <figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">&#x27;&#123;greet&#125; from &#123;language&#125;.&#x27;</span>.<span class="built_in">format</span>(greet=<span class="string">&#x27;Hello world&#x27;</span>, language=<span class="string">&#x27;Python&#x27;</span>)</span><br></pre></td></tr></table></div></figure>
+
+<p>**str.format()**方法非常清晰地表明了这条语句的意图，而且模板的使用也减少了许多不必要的字符，使可读性得到了很大的提升。</p>
+
+        <h2 id="2、Pythonic"   >
+          <a href="#2、Pythonic" class="heading-link"><i class="fas fa-link"></i></a>2、Pythonic</h2>
+      <ul>
+<li>三元操作符<ul>
+<li><strong>?:</strong></li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="3、在代码中适当添加注释"   >
+          <a href="#3、在代码中适当添加注释" class="heading-link"><i class="fas fa-link"></i></a>3、在代码中适当添加注释</h2>
+      <ul>
+<li>块注释</li>
+<li>行注释</li>
+<li>文档注释(<strong>docstring</strong>)</li>
+</ul>
+<p>注释和代码之间<strong>隔开一定的距离</strong>，同时在<strong>块注释之后</strong>最好多留几行空白在写代码</p>
+
+        <h2 id="4、通过适当添加空行使得代码布局更为优雅、合理"   >
+          <a href="#4、通过适当添加空行使得代码布局更为优雅、合理" class="heading-link"><i class="fas fa-link"></i></a>4、通过适当添加空行使得代码布局更为优雅、合理</h2>
+      <p>在函数定义或者类定义之间空两行，在类定义与第一个方法之间，或者需要进行语义分割的地方空一行。</p>
+<p>空行是在不隔断代码之间的内在联系的基础上插入的，<strong>有关联的代码还是需要保持紧凑、连续</strong>。</p>
+<p>尽量保持上下文语义的易理解性。如当一个函数需要调用另一个函数的时候，尽量放在一起，最好是<strong>调用者在上，被调用者在下</strong>。</p>
+<p><strong>逗号和分号前</strong>不要有空格。</p>
+<p>函数的默认值两侧不需要有空格。</p>
+
+        <h2 id="5、编写函数的几个原则"   >
+          <a href="#5、编写函数的几个原则" class="heading-link"><i class="fas fa-link"></i></a>5、编写函数的几个原则</h2>
+      <ul>
+<li>主体内容尽量短小，嵌套层次最好<strong>不超过三层</strong></li>
+<li><strong>函数名</strong>做到合理、简单、易于使用，<strong>函数参数也不宜过多</strong></li>
+<li>函数<strong>参数设计</strong>应该考虑<strong>向下兼容</strong></li>
+<li><strong>一个函数只做一件事情</strong>，尽量保证函数颗粒度一致性</li>
+<li><strong>不要在函数参数中定义可变对象作为默认值</strong></li>
+</ul>
+
+        <h2 id="6、将常量集中到一个文件"   >
+          <a href="#6、将常量集中到一个文件" class="heading-link"><i class="fas fa-link"></i></a>6、将常量集中到一个文件</h2>
+      <p>通过命名风格来提醒使用者该变量的意义为常量，如常量名所有字母大写，用下划线连接各个单词，如MAX_OVERFLOW、TOTAL。</p>
+<p>无论是采用哪一种方法实现常量，都提倡将<strong>常量集中到一个文件里面</strong>，这样有利于维护，一旦需要修改常量，可以集中统一进行而不是逐个文件进行检查。</p>
+
+        <h2 id="7、利用assert语句发现问题"   >
+          <a href="#7、利用assert语句发现问题" class="heading-link"><i class="fas fa-link"></i></a>7、利用assert语句发现问题</h2>
+      <p>assert expression1 [“”, expression2]</p>
+<p>其中计算<strong>expression1的值会返回True或者False</strong>，当值为False的时候会引发AssertionError,而<strong>expression2</strong>是可选的，常用来传递<strong>具体的异常信息</strong>。</p>
+<p>断言实际是被设计用来捕获用户所定义的约束的，而不是用来捕获程序本身错误的，因此使用断言需要注意以下几点：</p>
+<ul>
+<li><strong>不要滥用</strong>，这是使用断言最基本的原则</li>
+<li>如果Python<strong>本身的异常能够处理</strong>就不要再使用断言</li>
+</ul>
+
+        <h2 id="8、不推荐使用type来进行类型检查"   >
+          <a href="#8、不推荐使用type来进行类型检查" class="heading-link"><i class="fas fa-link"></i></a>8、不推荐使用type来进行类型检查</h2>
+      <p>推荐使用isinstance(n, int)</p>
+<p>如果n是int类型，则返回True，否则返回False。</p>
+
+        <h2 id="9、分清-和is的使用场景"   >
+          <a href="#9、分清-和is的使用场景" class="heading-link"><i class="fas fa-link"></i></a>9、分清==和is的使用场景</h2>
+      <p><strong>is</strong>是用来检查<strong>对象的标识符是否一致</strong>，也就是比较两个对象在内存中<strong>是否拥有同一块内存空间</strong>，并不适用于判断两个字符串是否相等，也就是<strong>id(x) == id(y)</strong></p>
+<p><strong>==**才是用来检查</strong>两个对象的值**是否相等。</p>
+
+        <h2 id="10、python中的变量以及值传递的探索"   >
+          <a href="#10、python中的变量以及值传递的探索" class="heading-link"><i class="fas fa-link"></i></a>10、python中的变量以及值传递的探索</h2>
+      
+        <h3 id="引用和对象的关系"   >
+          <a href="#引用和对象的关系" class="heading-link"><i class="fas fa-link"></i></a>引用和对象的关系</h3>
+      <p><strong>id函数</strong>查看对象的身份，这个所谓的身份就是对象的<strong>内存地址</strong>。</p>
+<p><img src="https://pic.downk.cc/item/5fdabbbf3ffa7d37b3126c51.png"></p>
+<p><strong>对象</strong>：当创建数据对象时，在<strong>内存中会保存对象的值</strong>，这个值就是对象自己。</p>
+<p><strong>引用</strong>：对象保存在内存空间，<strong>外部想要使用对象的值</strong>，需要使用<strong>引用</strong>。内存会保存对象的<strong>引用数量</strong>，当某个对象的<strong>引用数量为0时</strong>，<strong>对象会被回收</strong>。</p>
+
+        <h3 id="引用传递和值传递"   >
+          <a href="#引用传递和值传递" class="heading-link"><i class="fas fa-link"></i></a>引用传递和值传递</h3>
+      <p><strong>可变对象为引用传递，不可变对象为值传递。</strong></p>
+
+        <h2 id="11、变量作用域"   >
+          <a href="#11、变量作用域" class="heading-link"><i class="fas fa-link"></i></a>11、变量作用域</h2>
+      <p>通俗来讲，就是<strong>内部代码可以访问外部变量</strong>，<strong>外部代码没法访问内部变量</strong>。</p>
+<p>python作用域一般分为4层，分别是：</p>
+<ul>
+<li><p>L(<strong>Local</strong>) 局部作用域</p>
+</li>
+<li><p>E(<strong>Enclosing</strong>) 闭包函数外的函数中</p>
+</li>
+<li><p>G(<strong>Global</strong>)全局作用域</p>
+</li>
+<li><p>B(<strong>Built-in</strong>)内建作用域</p>
+</li>
+</ul>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">global_var = <span class="number">0</span>  <span class="comment"># 全局作用域</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outer</span>():</span></span><br><span class="line">	out_var = <span class="number">1</span>  <span class="comment"># 闭包函数外的函数中</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">inner</span>():</span></span><br><span class="line">		inner_var = <span class="number">2</span>  <span class="comment"># 局部作用域</span></span><br></pre></td></tr></table></div></figure>
+
+<p>Python以<code>L –&gt; E –&gt; G –&gt;B</code>的规则查找变量，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，最后去内建中找。</p>
+
+        <h3 id="global与nonlocal关键字"   >
+          <a href="#global与nonlocal关键字" class="heading-link"><i class="fas fa-link"></i></a>global与nonlocal关键字</h3>
+      <ul>
+<li><strong>global</strong>用来指定<strong>当前变量</strong>使用外部的<strong>全局变量</strong></li>
+<li><strong>nonlocal</strong>用来<strong>嵌套作用域</strong>中的变量</li>
+</ul>
+
+        <h2 id="12、else子句的妙用"   >
+          <a href="#12、else子句的妙用" class="heading-link"><i class="fas fa-link"></i></a>12、else子句的妙用</h2>
+      <p>当循环自然终结(<strong>循环条件为假</strong>)时<strong>else从句会被执行一次</strong>，而当循环是<strong>由break语句中断</strong>时，<strong>else子句不被执行</strong>。与for语句相似，while语句中的else子句的语义是一样的：<strong>else块在循环正常结束和循环条件不成立时被执行</strong>。</p>
+<p>在python的<strong>异常处理</strong>中，也提供了else子句语法，这颗”语法糖”的意义跟循环语句中的else相似：try块中<strong>没有抛出任何异常</strong>，<strong>执行else块</strong>。</p>
+
+        <h2 id="13、异常处理原则"   >
+          <a href="#13、异常处理原则" class="heading-link"><i class="fas fa-link"></i></a>13、异常处理原则</h2>
+      <p>Python中常用的异常处理语法是<strong>try</strong>、<strong>except</strong>、<strong>else</strong>、<strong>finally</strong>，它们可以有多种组合，如<strong>try-except</strong>（一个或多个），<strong>try -except-else</strong>；<strong>try -finally</strong>以及<strong>try -except-else-finally</strong>等。</p>
+<ul>
+<li>注意异常的粒度，<strong>不推荐在try中放入过多的代码</strong>。</li>
+<li><strong>谨慎</strong>使用单独的except语句处理<strong>所有异常</strong>，最好能定位具体的异常。同样也不推荐使用except Exception或者except StandardError来捕获异常。如果不得不使用<strong>单独的except语句</strong>，最好能够使用<strong>raise语句</strong>将异常抛出向上层传递。</li>
+</ul>
+
+        <h2 id="14、深入理解None，正确判断对象是否为空"   >
+          <a href="#14、深入理解None，正确判断对象是否为空" class="heading-link"><i class="fas fa-link"></i></a>14、深入理解None，正确判断对象是否为空</h2>
+      <p>先来了解一下Python中哪些形式的数据为空。Python中 以下数据会当作空来处理：</p>
+<ul>
+<li>常量 None</li>
+<li>常量 False</li>
+<li>任何形式的数值类型零</li>
+<li>空的序列， 字符串、列表、元组</li>
+<li>空的字典</li>
+</ul>
+<p>其中<strong>常量None</strong>的特殊性体现在<strong>它既不是0、False，也不是空字符串，它就是一个空值对象</strong>。数据类型是<strong>NoneType</strong>，遵循单例模式，是唯一的，因而不能创建None对象。所有赋值为None的变量都相等。</p>
+
+        <h2 id="15、连接字符串优先使用join而不是"   >
+          <a href="#15、连接字符串优先使用join而不是" class="heading-link"><i class="fas fa-link"></i></a>15、连接字符串优先使用join而不是+</h2>
+      <p>字符串的连接，特别是<strong>大规模的字符串的处理</strong>，应该尽量<strong>优先使用join</strong>而不是+。</p>
+
+        <h2 id="16、格式化字符串时尽量使用format方式而不是"   >
+          <a href="#16、格式化字符串时尽量使用format方式而不是" class="heading-link"><i class="fas fa-link"></i></a>16、格式化字符串时尽量使用format方式而不是%</h2>
+      <ul>
+<li><strong>format</strong>方式在使用上较%操作符<strong>更为灵活</strong>。使用format方式时，<strong>参数的顺序与格式化的顺序不必完全相同</strong>。</li>
+<li>format方式可以方便地传递参数</li>
+<li><strong>%将会被format替代</strong></li>
+</ul>
+
+        <h2 id="17、-、-、和-一致的容器初始化形式"   >
+          <a href="#17、-、-、和-一致的容器初始化形式" class="heading-link"><i class="fas fa-link"></i></a>17、[]、()、和{}:一致的容器初始化形式</h2>
+      <p>列表解析的语法：**[expr for iter_item in iterable if cond_expr]**</p>
+<ul>
+<li><strong>条件表达式不是必需的</strong></li>
+<li><strong>expr也可以是函数</strong></li>
+<li><strong>iterable</strong>可以是<strong>任意可迭代对象</strong>，也可以传入一个<strong>句柄</strong>，可以轻易的读出文件内容。</li>
+<li>列表解析式效率更高。</li>
+</ul>
+<p>其他类似<strong>元组</strong>和<strong>字典</strong>都可以使用相应的<strong>推导式</strong>进行初始化，推导式是一个非常<strong>实用和高效</strong>的初始化形式。</p>
+
+        <h2 id="18、按需选择sort-或者sorted"   >
+          <a href="#18、按需选择sort-或者sorted" class="heading-link"><i class="fas fa-link"></i></a>18、按需选择sort()或者sorted()</h2>
+      <p>两者函数形式如下：</p>
+<p>sorted(iterable[, cmp[, key[, reverse]]])</p>
+<p>a.sorted([cmp[, key[, reverse]]])</p>
+<ul>
+<li>cmp 为用户定义的任何比较函数，函数的参数为两个可以比较的元素</li>
+<li>key 是带一个参数的函数，用来为每个元素提取比较值</li>
+<li>reverse 表示排序结果是否反转</li>
+</ul>
+<p>一般来说，<strong>sorted</strong>函数用于任意<strong>可迭代的对象</strong>，而<strong>sort</strong>一般作用于<strong>列表</strong>。</p>
+<p>对于<strong>列表</strong>来说就有<strong>两个选择</strong>：<strong>sorted</strong>创建一个新的<strong>返回的排序列表</strong>,<strong>a.sort没有返回值</strong>，对原列表进行操作排序。</p>
+
+        <h2 id="19、使用Counter进行计数统计"   >
+          <a href="#19、使用Counter进行计数统计" class="heading-link"><i class="fas fa-link"></i></a>19、使用Counter进行计数统计</h2>
+      <p>Counter类是自Python2.7起增加的，属于字典类的子类，是一个容器对象，主要用来统计散列对象。</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line">some_data = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="number">3</span>, <span class="string">&#x27;5&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(Counter(some_data))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dict</span>(Counter(some_data)))</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Counter(&#123;&#x27;a&#x27;: 2, &#x27;2&#x27;: 2, 2: 2, 3: 1, &#x27;5&#x27;: 1&#125;)</span></span><br><span class="line"><span class="string">&#123;&#x27;a&#x27;: 2, &#x27;2&#x27;: 2, 2: 2, 3: 1, &#x27;5&#x27;: 1&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></div></figure>
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://nbuyy515.top">摆渡人</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://nbuyy515.top/2020/12/15/%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E5%96%84python%E7%A8%8B%E5%BA%8F%E7%9A%8491%E4%B8%AA%E5%BB%BA%E8%AE%AE/">http://nbuyy515.top/2020/12/15/%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81%EF%BC%9A%E6%94%B9%E5%96%84python%E7%A8%8B%E5%BA%8F%E7%9A%8491%E4%B8%AA%E5%BB%BA%E8%AE%AE/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://nbuyy515.top/tags/python/">python</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/12/15/python-%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">python-可变对象和不可变对象</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/12/12/%E8%A7%A3%E8%AF%BB%E5%9F%BA%E9%87%91-%E6%88%91%E7%9A%84%E6%8A%95%E8%B5%84%E8%A7%82/"><span class="paginator-prev__text">解读基金-我的投资观</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">1.</span> <span class="toc-text">
+          1、字符串格式化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Pythonic"><span class="toc-number">2.</span> <span class="toc-text">
+          2、Pythonic</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%9C%A8%E4%BB%A3%E7%A0%81%E4%B8%AD%E9%80%82%E5%BD%93%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A"><span class="toc-number">3.</span> <span class="toc-text">
+          3、在代码中适当添加注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E9%80%9A%E8%BF%87%E9%80%82%E5%BD%93%E6%B7%BB%E5%8A%A0%E7%A9%BA%E8%A1%8C%E4%BD%BF%E5%BE%97%E4%BB%A3%E7%A0%81%E5%B8%83%E5%B1%80%E6%9B%B4%E4%B8%BA%E4%BC%98%E9%9B%85%E3%80%81%E5%90%88%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">
+          4、通过适当添加空行使得代码布局更为优雅、合理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%BC%96%E5%86%99%E5%87%BD%E6%95%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E5%8E%9F%E5%88%99"><span class="toc-number">5.</span> <span class="toc-text">
+          5、编写函数的几个原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%B0%86%E5%B8%B8%E9%87%8F%E9%9B%86%E4%B8%AD%E5%88%B0%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">
+          6、将常量集中到一个文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E5%88%A9%E7%94%A8assert%E8%AF%AD%E5%8F%A5%E5%8F%91%E7%8E%B0%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">
+          7、利用assert语句发现问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8type%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5"><span class="toc-number">8.</span> <span class="toc-text">
+          8、不推荐使用type来进行类型检查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E5%88%86%E6%B8%85-%E5%92%8Cis%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">9.</span> <span class="toc-text">
+          9、分清&#x3D;&#x3D;和is的使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81python%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%BB%A5%E5%8F%8A%E5%80%BC%E4%BC%A0%E9%80%92%E7%9A%84%E6%8E%A2%E7%B4%A2"><span class="toc-number">10.</span> <span class="toc-text">
+          10、python中的变量以及值传递的探索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">10.1.</span> <span class="toc-text">
+          引用和对象的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%E5%92%8C%E5%80%BC%E4%BC%A0%E9%80%92"><span class="toc-number">10.2.</span> <span class="toc-text">
+          引用传递和值传递</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">11.</span> <span class="toc-text">
+          11、变量作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#global%E4%B8%8Enonlocal%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">11.1.</span> <span class="toc-text">
+          global与nonlocal关键字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81else%E5%AD%90%E5%8F%A5%E7%9A%84%E5%A6%99%E7%94%A8"><span class="toc-number">12.</span> <span class="toc-text">
+          12、else子句的妙用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%8E%9F%E5%88%99"><span class="toc-number">13.</span> <span class="toc-text">
+          13、异常处理原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3None%EF%BC%8C%E6%AD%A3%E7%A1%AE%E5%88%A4%E6%96%AD%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E7%A9%BA"><span class="toc-number">14.</span> <span class="toc-text">
+          14、深入理解None，正确判断对象是否为空</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BC%98%E5%85%88%E4%BD%BF%E7%94%A8join%E8%80%8C%E4%B8%8D%E6%98%AF"><span class="toc-number">15.</span> <span class="toc-text">
+          15、连接字符串优先使用join而不是+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16%E3%80%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%97%B6%E5%B0%BD%E9%87%8F%E4%BD%BF%E7%94%A8format%E6%96%B9%E5%BC%8F%E8%80%8C%E4%B8%8D%E6%98%AF"><span class="toc-number">16.</span> <span class="toc-text">
+          16、格式化字符串时尽量使用format方式而不是%</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17%E3%80%81-%E3%80%81-%E3%80%81%E5%92%8C-%E4%B8%80%E8%87%B4%E7%9A%84%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BD%A2%E5%BC%8F"><span class="toc-number">17.</span> <span class="toc-text">
+          17、[]、()、和{}:一致的容器初始化形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18%E3%80%81%E6%8C%89%E9%9C%80%E9%80%89%E6%8B%A9sort-%E6%88%96%E8%80%85sorted"><span class="toc-number">18.</span> <span class="toc-text">
+          18、按需选择sort()或者sorted()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19%E3%80%81%E4%BD%BF%E7%94%A8Counter%E8%BF%9B%E8%A1%8C%E8%AE%A1%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-number">19.</span> <span class="toc-text">
+          19、使用Counter进行计数统计</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://pic.downk.cc/item/5fb79f1fb18d627113fe02ef.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">夫唯不争，故天下莫能与之争。</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/python-deathfans" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">58</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">61</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020~2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>摆渡人</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.3.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"><div class="search-btns">使用搜索：<span class="search-btns-item search-btns-item--google"><i class="fab fa-google"></i>谷歌</span><span class="search-btns-item search-btns-item--bing"><i></i>必应</span><span class="search-btns-item search-btns-item--baidu"><i></i>百度</span></div></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js" color="0,0,0" opacity="0.6" count="99" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.xml';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);
+
+function safeOpenUrl(url) {
+  var newTab = window.open();
+  newTab.opener = null;
+  newTab.location = url;
+}
+
+function extSearch(engine) {
+  var engines = {
+    google: 'https://www.google.com/search?q=',
+    bing: 'https://cn.bing.com/search?q=',
+    baidu: 'https://www.baidu.com/s?ie=UTF-8&wd=',
+  };
+  var host = window.location.host;
+  var query = $('.search-input input').val().toLowerCase().trim();
+  var uri = engines[engine] + query + ' site:' + host;
+
+  if (query) {
+    safeOpenUrl(uri);
+  } else {
+    Stun.utils.popAlert('warning', '请输入字符');
+  }
+}
+
+var assistSearchList = window.CONFIG.assistSearch;
+
+if (Array.isArray(assistSearchList)) {
+  assistSearchList.forEach(function (name) {
+    document.querySelector('.search-btns-item--' + name).addEventListener('click', function () {
+      extSearch(name);
+    }, false);
+  });
+}</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = '';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'pJvCmUv9psrTCJOSruLEjuFE-gzGzoHsz',
+    appKey: 'iGwMIs6uc16FXXx0YER9AcBW',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.3.0"></script><script src="/js/stun-boot.js?v=2.3.0"></script><script src="/js/scroll.js?v=2.3.0"></script><script src="/js/header.js?v=2.3.0"></script><script src="/js/sidebar.js?v=2.3.0"></script><script type="application/json" src="/search.xml"></script></body></html>
