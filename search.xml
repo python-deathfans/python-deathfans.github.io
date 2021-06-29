@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>数据分析--excel</title>
+      <link href="/2021/06/29/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-excel/"/>
+      <url>/2021/06/29/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-excel/</url>
+      
+        <content type="html"><![CDATA[<p>本节介绍数据分析之excel内容篇。</p><span id="more"></span>        <h2 id="excel–基础篇"   >          <a href="#excel–基础篇" class="heading-link"><i class="fas fa-link"></i></a>excel–基础篇</h2>              <h3 id="基础知识"   >          <a href="#基础知识" class="heading-link"><i class="fas fa-link"></i></a>基础知识</h3>      <ul><li>公式必须以**=**开头</li><li>公式可以包含<strong>常数</strong>、单元格引用、命名空间</li><li><strong>命名区域</strong><ul><li>定义某一位置的术语或者值，然后可以重复用于整个工作簿</li><li><strong>公式  -&gt;  名称管理器</strong>   进行查看</li></ul></li></ul>        <h3 id="函数分类"   >          <a href="#函数分类" class="heading-link"><i class="fas fa-link"></i></a>函数分类</h3>      <p>数学</p><ul><li><strong>MODE</strong><ul><li>众数</li></ul></li><li><strong>MEDIAN</strong><ul><li>中位数</li></ul></li></ul><p>字符串</p><ul><li><strong>&amp;</strong><ul><li>连接多个参数或者单元格</li></ul></li><li><strong>C1&amp;”.”&amp;C2</strong><ul><li>使用.连接C1和C2单元格</li></ul></li></ul><p>条件函数</p><ul><li>IF</li><li><strong>COUNTIFS</strong><ul><li>区域一，条件1一；区域二，条件二。。。</li></ul></li><li><strong>SUMIFS</strong><ul><li>求和区域；区域一，条件一；区域二，条件二。。。</li></ul></li></ul><p>查找函数</p><ul><li><strong>VLOOKUP</strong>（）    <ul><li>查找数值</li><li>查找范围</li><li>选择列数</li><li>精确查询还是模糊查询</li></ul></li></ul>        <h3 id="操作技巧"   >          <a href="#操作技巧" class="heading-link"><i class="fas fa-link"></i></a>操作技巧</h3>      <ul><li><strong>数据验证</strong><ul><li>快速添加所需要的数据，还有验证功能</li><li>操作<ul><li>选中区域</li><li>点击  <strong>数据-&gt;数据验证</strong></li><li>选择 <strong>序列</strong></li><li>输入候选项，用<strong>英文逗号</strong>进行分隔</li></ul></li></ul></li><li><strong>自动筛选</strong><ul><li>选中数据</li><li>点击 <strong>数据-&gt; 筛选</strong></li></ul></li><li><strong>分类汇总</strong><ul><li>数据需要先排序</li><li>功能类似于数据透视表</li></ul></li><li><strong>窗口冻结</strong><ul><li><strong>视图</strong></li><li><strong>冻结窗格</strong></li><li>选中部分的左侧和上侧在滑动的过程保持不变</li></ul></li></ul>        <h2 id="excel–数据透视表"   >          <a href="#excel–数据透视表" class="heading-link"><i class="fas fa-link"></i></a>excel–数据透视表</h2>      <ul><li>定义<ul><li>获取数据，数据汇总，这样就可以<strong>了解数字背后的意义</strong>，而不用输入公式</li></ul></li><li>行字段</li><li><strong>值字段</strong></li><li>创建步骤<ul><li>选中数据区域</li><li>点击  <strong>插入-&gt;数据透视表</strong></li><li>先将<strong>值字段拖入</strong>，然后依据需求拖入其他字段</li><li>最后确定信息</li><li>切记，<strong>不要在数据透视表进行数据操作</strong></li></ul></li></ul>        <h2 id="excel–图表绘制"   >          <a href="#excel–图表绘制" class="heading-link"><i class="fas fa-link"></i></a>excel–图表绘制</h2>      <p><strong>饼图</strong></p><ul><li>场景<ul><li>需要显示构成整体的<strong>部分</strong></li></ul></li><li>数值类别<ul><li>决定扇区的个数</li></ul></li><li>值<ul><li>决定扇区的大小</li></ul></li></ul><p>在值数据上方键入图表标题</p><p>将数值进行排序</p><p><strong>添加数据标签</strong></p><p><strong>强调颜色</strong></p><p><strong>扇区太多</strong>的时候，可以改用<strong>柱形图</strong></p><p>饼图太过于<strong>相似</strong>，可以改为<strong>条形图</strong></p><p><strong>圆环图</strong></p><ul><li>设置<strong>数据系列格式</strong>，进行圆环大小的调整</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据分析 </tag>
+            
+            <tag> excel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小狗钱钱(重读)</title>
       <link href="/2021/06/28/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1-%E9%87%8D%E8%AF%BB/"/>
       <url>/2021/06/28/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1-%E9%87%8D%E8%AF%BB/</url>
