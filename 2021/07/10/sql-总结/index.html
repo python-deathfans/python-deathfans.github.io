@@ -1,0 +1,539 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.3.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.3.0" type="image/png" sizes="32x32"><meta name="description" content="本篇内容对于之前的数据分析sql篇进行总结。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql(总结)">
+<meta property="og:url" content="http://nbuyy515.top/2021/07/10/sql-%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="摆渡人">
+<meta property="og:description" content="本篇内容对于之前的数据分析sql篇进行总结。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60e65dde5132923bf8930dd4.jpg">
+<meta property="article:published_time" content="2021-07-09T23:40:17.000Z">
+<meta property="article:modified_time" content="2021-07-10T00:54:28.944Z">
+<meta property="article:author" content="摆渡人">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="sql">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/60e65dde5132923bf8930dd4.jpg"><title>sql(总结) | 摆渡人</title><link ref="canonical" href="http://nbuyy515.top/2021/07/10/sql-%E6%80%BB%E7%BB%93/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.3.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: ["google","bing","baidu"],
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/阅读/"><span class="header-nav-menu-item__text">阅读</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/理财/"><span class="header-nav-menu-item__text">理财</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/生活经济学"><span class="header-nav-menu-item__text">生活经济学</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/数据分析/"><span class="header-nav-menu-item__text">数据分析</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/python/"><span class="header-nav-menu-item__text">python</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/随笔/"><span class="header-nav-menu-item__text">随笔</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/日记"><span class="header-nav-menu-item__text">日记</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">摆渡人</div><div class="header-banner-info__subtitle">渡人不渡己</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">sql(总结)</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2021-07-10</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2021-07-10</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">854</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">5分</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2021/07/10/sql-%E6%80%BB%E7%BB%93/" data-flag-title="sql(总结)"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p>本篇内容对于之前的数据分析sql篇进行总结。</p>
+<span id="more"></span>
+
+
+        <h1 id="基础知识"   >
+          <a href="#基础知识" class="heading-link"><i class="fas fa-link"></i></a>基础知识</h1>
+      
+        <h2 id="sql执行顺序"   >
+          <a href="#sql执行顺序" class="heading-link"><i class="fas fa-link"></i></a>sql执行顺序</h2>
+      
+        <h2 id="表的创建"   >
+          <a href="#表的创建" class="heading-link"><i class="fas fa-link"></i></a>表的创建</h2>
+      <figure class="highlight sql"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> if <span class="keyword">not</span> <span class="keyword">exists</span> table_name</span><br><span class="line">(</span><br><span class="line">	column1 type <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">	column2 type <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">	column3 type <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span></span><br><span class="line">	(</span><br><span class="line">	....</span><br><span class="line">	)</span><br><span class="line">);</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>首先需要判断一下表是否存在，如果不存在在，则创建</li>
+<li>主键设置， 默认值设置</li>
+</ul>
+
+        <h2 id="创建表的同时导入查询数据"   >
+          <a href="#创建表的同时导入查询数据" class="heading-link"><i class="fas fa-link"></i></a>创建表的同时导入查询数据</h2>
+      <figure class="highlight sql"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> ....;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name</span><br><span class="line"><span class="keyword">SELECT</span> ....</span><br><span class="line"><span class="keyword">FROM</span> another_table;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="添加新字段"   >
+          <a href="#添加新字段" class="heading-link"><i class="fas fa-link"></i></a>添加新字段</h2>
+      <figure class="highlight sql"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> table_name <span class="keyword">add</span> <span class="keyword">column</span> create_date datetime <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">default</span> <span class="string">&#x27;000-00-00 00:00:00&#x27;</span></span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="表的更新"   >
+          <a href="#表的更新" class="heading-link"><i class="fas fa-link"></i></a>表的更新</h2>
+      <figure class="highlight sql"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update test_table</span><br><span class="line"><span class="keyword">set</span> to_date<span class="operator">=</span><span class="keyword">null</span>, from_date<span class="operator">=</span><span class="string">&#x27;2001-01-01&#x27;</span></span><br><span class="line"><span class="keyword">where</span> to_date<span class="operator">=</span><span class="string">&#x27;...&#x27;</span></span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="表的重命名"   >
+          <a href="#表的重命名" class="heading-link"><i class="fas fa-link"></i></a>表的重命名</h2>
+      <figure class="highlight sql"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> test_table rename <span class="keyword">to</span> test2_table</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="in和exists的区别"   >
+          <a href="#in和exists的区别" class="heading-link"><i class="fas fa-link"></i></a>in和exists的区别</h2>
+      <ul>
+<li>IN<ul>
+<li>先执行<strong>子查询</strong></li>
+<li>然后将结果和外表做<strong>笛卡尔积</strong></li>
+<li>然后根据条件进行筛选</li>
+<li><strong>一次检索</strong></li>
+</ul>
+</li>
+<li>EXISTS<ul>
+<li><strong>先执行主查询的表</strong></li>
+<li><strong>遍历循环外部查询结果</strong>，看外表中的记录有没有和内表的数据一样的</li>
+<li>匹配上就将结果放入结果集中</li>
+</ul>
+</li>
+</ul>
+
+        <h1 id="常用函数"   >
+          <a href="#常用函数" class="heading-link"><i class="fas fa-link"></i></a>常用函数</h1>
+      
+        <h2 id="CONCAT-data1-data2-data3"   >
+          <a href="#CONCAT-data1-data2-data3" class="heading-link"><i class="fas fa-link"></i></a>CONCAT(data1, data2, data3)</h2>
+      <ul>
+<li>可以将data1..data3拼接起来</li>
+<li>其中可以包含通配符，如果不想用通配符，可以加上转义字符\</li>
+</ul>
+
+        <h2 id="REPLACE-str1-str2-str3"   >
+          <a href="#REPLACE-str1-str2-str3" class="heading-link"><i class="fas fa-link"></i></a>REPLACE(str1, str2, str3)</h2>
+      <ul>
+<li>如果在str1中出现了str2,则使用str3进行替换</li>
+</ul>
+
+        <h2 id="MID-column-name-start-stop"   >
+          <a href="#MID-column-name-start-stop" class="heading-link"><i class="fas fa-link"></i></a>MID(column_name, start, stop)</h2>
+      <ul>
+<li>column_name: 要提取字符的字段</li>
+<li>start: 开始位置</li>
+<li>stop: 要返回的字符数，可以省略，返回剩余文本</li>
+</ul>
+
+        <h2 id="ALL"   >
+          <a href="#ALL" class="heading-link"><i class="fas fa-link"></i></a>ALL()</h2>
+      <ul>
+<li>逻辑运算符</li>
+<li>将<strong>单个值</strong>和子查询返回的<strong>单列值</strong>进行比较</li>
+</ul>
+
+        <h2 id="CASE-WHEN"   >
+          <a href="#CASE-WHEN" class="heading-link"><i class="fas fa-link"></i></a>CASE WHEN</h2>
+      <p><strong>case 字段</strong></p>
+<p><strong>WHEN 条件1    then     值1</strong></p>
+<p><strong>WHEN 条件2    then    值2</strong></p>
+<p><strong>ELSE 默认值</strong></p>
+<p><strong>END 字段重命名</strong></p>
+
+        <h2 id="group-concat-column"   >
+          <a href="#group-concat-column" class="heading-link"><i class="fas fa-link"></i></a>group_concat(column)</h2>
+      <ul>
+<li>使用<strong>逗号</strong>将该字段进行拼接</li>
+<li>通常配合<strong>group by</strong>使用</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/60e65dde5132923bf8930dd4.jpg" alt="img"></p>
+
+        <h1 id="查询"   >
+          <a href="#查询" class="heading-link"><i class="fas fa-link"></i></a>查询</h1>
+      
+        <h2 id="标准查询"   >
+          <a href="#标准查询" class="heading-link"><i class="fas fa-link"></i></a>标准查询</h2>
+      <ul>
+<li><strong>limit 1 offset 1</strong><ul>
+<li>选择一个数据</li>
+<li>跳过第一行从第二行开始选取</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="模糊查询"   >
+          <a href="#模糊查询" class="heading-link"><i class="fas fa-link"></i></a>模糊查询</h2>
+      <ul>
+<li><strong>%</strong><ul>
+<li>代表任意字符出现任意次数</li>
+</ul>
+</li>
+<li><strong>_</strong><ul>
+<li>代表单个字符</li>
+</ul>
+</li>
+<li>包含三个或者三个以上a<ul>
+<li><strong>%a%a%a%</strong></li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="子查询"   >
+          <a href="#子查询" class="heading-link"><i class="fas fa-link"></i></a>子查询</h2>
+      <p>在每一個州中找出最大面積的國家，列出洲份<strong>continent</strong>, 國家名字 <strong>name **及面積 **area</strong>。 (有些國家的記錄中，AREA是NULL，沒有填入資料的。)</p>
+<figure class="highlight sql"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> continent, name, area <span class="keyword">FROM</span> world x</span><br><span class="line">  <span class="keyword">WHERE</span> area<span class="operator">&gt;=</span> <span class="keyword">ALL</span></span><br><span class="line">    (<span class="keyword">SELECT</span> area <span class="keyword">FROM</span> world y</span><br><span class="line">        <span class="keyword">WHERE</span> y.continent<span class="operator">=</span>x.continent</span><br><span class="line">          <span class="keyword">AND</span> area<span class="operator">&gt;</span><span class="number">0</span>)</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>某些SQL系统需要对子查询<strong>重命名</strong></li>
+</ul>
+
+        <h1 id="分组与汇总"   >
+          <a href="#分组与汇总" class="heading-link"><i class="fas fa-link"></i></a>分组与汇总</h1>
+      <blockquote>
+<p>分组先当于对<strong>相同的字段</strong>进行<strong>合并汇总</strong></p>
+</blockquote>
+<p>多个字段进行分组</p>
+<ul>
+<li>GROUP BY X:    将所有具有相同X字段的记录放到一个分组里面</li>
+<li>GROUP BY X, Y:    将所有相同 X Y字段的记录放在一个分组里面</li>
+</ul>
+
+        <h1 id="表联结"   >
+          <a href="#表联结" class="heading-link"><i class="fas fa-link"></i></a>表联结</h1>
+      <p>left join(左联接)</p>
+<ul>
+<li>返回左表中所有记录以及右表中联结字段相等的记录</li>
+</ul>
+<p>inner join(等值联结)</p>
+<ul>
+<li>☞返回两个表中联结字段相等的记录</li>
+</ul>
+<p>full join(外联结)</p>
+<ul>
+<li>返回两个表的并集</li>
+</ul>
+<p>cross join</p>
+<ul>
+<li>交叉联结</li>
+<li>笛卡尔积</li>
+</ul>
+<p>数据库在通过连接两张或者多张表来返回记录时，都会生成一张<strong>临时表</strong>，然后将这张临时表返回给用户。在使用<strong>left join</strong>时，<strong>on</strong>和<strong>where</strong>条件的区别如下：</p>
+<ul>
+<li>on条件是在生产临时表时使用的条件，它<strong>不管on中的条件是否为真，都会返回左表中的记录</strong></li>
+<li><strong>where是在临时表生成之后</strong>，再对临时表进行过滤的条件。条件不为真会全部被过滤掉</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://nbuyy515.top">摆渡人</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://nbuyy515.top/2021/07/10/sql-%E6%80%BB%E7%BB%93/">http://nbuyy515.top/2021/07/10/sql-%E6%80%BB%E7%BB%93/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://nbuyy515.top/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://nbuyy515.top/tags/sql/">sql</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/07/05/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-sql/"><span class="paginator-prev__text">数据分析--sql</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">
+          基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sql%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">
+          sql执行顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.2.</span> <span class="toc-text">
+          表的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%A1%A8%E7%9A%84%E5%90%8C%E6%97%B6%E5%AF%BC%E5%85%A5%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.</span> <span class="toc-text">
+          创建表的同时导入查询数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B0%E5%AD%97%E6%AE%B5"><span class="toc-number">1.4.</span> <span class="toc-text">
+          添加新字段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E7%9A%84%E6%9B%B4%E6%96%B0"><span class="toc-number">1.5.</span> <span class="toc-text">
+          表的更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E7%9A%84%E9%87%8D%E5%91%BD%E5%90%8D"><span class="toc-number">1.6.</span> <span class="toc-text">
+          表的重命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in%E5%92%8Cexists%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.7.</span> <span class="toc-text">
+          in和exists的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">
+          常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CONCAT-data1-data2-data3"><span class="toc-number">2.1.</span> <span class="toc-text">
+          CONCAT(data1, data2, data3)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REPLACE-str1-str2-str3"><span class="toc-number">2.2.</span> <span class="toc-text">
+          REPLACE(str1, str2, str3)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MID-column-name-start-stop"><span class="toc-number">2.3.</span> <span class="toc-text">
+          MID(column_name, start, stop)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ALL"><span class="toc-number">2.4.</span> <span class="toc-text">
+          ALL()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CASE-WHEN"><span class="toc-number">2.5.</span> <span class="toc-text">
+          CASE WHEN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#group-concat-column"><span class="toc-number">2.6.</span> <span class="toc-text">
+          group_concat(column)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.</span> <span class="toc-text">
+          查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.1.</span> <span class="toc-text">
+          标准查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.2.</span> <span class="toc-text">
+          模糊查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.3.</span> <span class="toc-text">
+          子查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E4%B8%8E%E6%B1%87%E6%80%BB"><span class="toc-number">4.</span> <span class="toc-text">
+          分组与汇总</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E8%81%94%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">
+          表联结</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://pic.downk.cc/item/5fb79f1fb18d627113fe02ef.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">夫唯不争，故天下莫能与之争。</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/python-deathfans" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">63</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">67</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020~2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>摆渡人</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.3.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"><div class="search-btns">使用搜索：<span class="search-btns-item search-btns-item--google"><i class="fab fa-google"></i>谷歌</span><span class="search-btns-item search-btns-item--bing"><i></i>必应</span><span class="search-btns-item search-btns-item--baidu"><i></i>百度</span></div></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js" color="0,0,0" opacity="0.6" count="99" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.xml';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);
+
+function safeOpenUrl(url) {
+  var newTab = window.open();
+  newTab.opener = null;
+  newTab.location = url;
+}
+
+function extSearch(engine) {
+  var engines = {
+    google: 'https://www.google.com/search?q=',
+    bing: 'https://cn.bing.com/search?q=',
+    baidu: 'https://www.baidu.com/s?ie=UTF-8&wd=',
+  };
+  var host = window.location.host;
+  var query = $('.search-input input').val().toLowerCase().trim();
+  var uri = engines[engine] + query + ' site:' + host;
+
+  if (query) {
+    safeOpenUrl(uri);
+  } else {
+    Stun.utils.popAlert('warning', '请输入字符');
+  }
+}
+
+var assistSearchList = window.CONFIG.assistSearch;
+
+if (Array.isArray(assistSearchList)) {
+  assistSearchList.forEach(function (name) {
+    document.querySelector('.search-btns-item--' + name).addEventListener('click', function () {
+      extSearch(name);
+    }, false);
+  });
+}</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = '';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'pJvCmUv9psrTCJOSruLEjuFE-gzGzoHsz',
+    appKey: 'iGwMIs6uc16FXXx0YER9AcBW',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.3.0"></script><script src="/js/stun-boot.js?v=2.3.0"></script><script src="/js/scroll.js?v=2.3.0"></script><script src="/js/header.js?v=2.3.0"></script><script src="/js/sidebar.js?v=2.3.0"></script><script type="application/json" src="/search.xml"></script></body></html>
