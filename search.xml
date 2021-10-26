@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>计算机网络基础</title>
+      <link href="/2021/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+      <url>/2021/10/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<p>本篇内容记录一下计算机网络基础知识，主要是ip 、子网掩码、dns、网关等等基础知识。</p><span id="more"></span>        <h2 id="ip"   >          <a href="#ip" class="heading-link"><i class="fas fa-link"></i></a>ip</h2>      <blockquote><p>ip这个名词相信大家不会陌生，经常在生活中被提及，它相当于寄快递时的地址一样。在网络世界中，每一台可以上网的设备都有一个自己的标识，可以是mac地址、ip地址等等，不同的协议使用的是不同的设备标识。协议这块后面可能会涉及，到时候在详细介绍。</p><p>总之，记住一句话，ip地址是用来标识一台网络设备，标识的目的肯定是在网络通信的时候不至于消息发送发送就丢掉了。</p></blockquote><p>ipv4(主流)由<strong>4组8位二进制</strong>组成(至于二进制是啥，大家自行百度一下哈，我就不罗嗦了)，组与组之间使用点分隔，通常将二进制转化为十进制，即<strong>点十进制表示</strong>，比如我们常见到的<strong>192.168.0.1</strong>或者<strong>127.0.0.1</strong>。(补充一下ipv6由<strong>128</strong>位二进制组成，分成8组，每组16位二进制，由于16个二进制太长，通常转化为4个16进制数值，这里需要掌握二进制和十六进制之间的转换)。</p><p>别看ip地址非常长，但是还是有一定规律的，比如ip地址由网络位和主机位组成，即<strong>ip地址=网络号+主机号</strong>，网络号用来表示该ip地址所属的网络，主机号表示该ip表示的是该网络下的哪个主机。根据网络号的不同，ipv4通常被分为<strong>5类网络</strong>：</p><img src="https://raw.githubusercontent.com/python-deathfans/tuchuang/main/20211026125757.png" alt="image-20211026125754475" style="zoom: 67%;" /><p><strong>A类地址</strong></p><ul><li>A类地址网络号范围：1.0.0.0—126.0.0.0 </li><li>留作局域网ip地址：<strong>10.0.0.0—10.255.255.255(下图中我的局域网ip就是该网段)</strong></li><li>127.X.X.X是保留地址，用做<strong>循环测试</strong>用的</li><li>由于有<strong>24</strong>位主机号，因此常用于大型网络</li></ul><p><strong>B类地址</strong></p><ul><li>B类地址网络号范围：128.0.0.0—191.255.0.0</li><li>留作局域网ip地址：<strong>172.16.0.0—172.31.255.255</strong></li><li>由于有<strong>16</strong>位主机号，因此常用于中型网络</li></ul><p><strong>C类地址</strong></p><ul><li>C类地址网络号范围：192.0.0.0—223.255.255.0</li><li>留作局域网ip地址：192.168.0.0—192.168.255.255</li><li>由于只有<strong>8</strong>位主机号，因此常被用于小型网络</li></ul><p>查看ip的方式也分为两种，<strong>公网IP</strong>和<strong>局域网IP</strong></p><ul><li>局域网ip<ul><li>windows用户<ul><li>cmd，输入 <strong>ipconfig</strong><ul><li><img src="https://pic.imgdb.cn/item/6176615e2ab3f51d91e99a2b.jpg" style="zoom: 80%;" /></li><li>其中IPv4地址，对应的是我们局域网的ip地址</li></ul></li></ul></li><li>Mac和Linux用户<ul><li>terminal窗口，输入<strong>ifconfig</strong><ul><li><img src="https://pic.imgdb.cn/item/61778f162ab3f51d91bbc225.jpg" style="zoom: 67%;" /></li><li>由于虚拟机断网了，所以显示的是本地回环地址，即本机地址</li></ul></li></ul></li></ul></li><li>公网ip<ul><li><strong>浏览器</strong>输入ip，回车即可看到自己的公网ip地址以及对应的网络服务提供商(<strong>ISP</strong>)    <ul><li><img src="https://pic.imgdb.cn/item/61778f9f2ab3f51d91bc1c4b.jpg"></li></ul></li></ul></li></ul>        <h2 id="子网掩码-amp-网关"   >          <a href="#子网掩码-amp-网关" class="heading-link"><i class="fas fa-link"></i></a>子网掩码&amp;网关</h2>      <blockquote><p>有了ip地址，为啥还要进行子网划分呢。其实随着互联网设备的增多，现有的ip地址已经根本不够用，为了扩大ip地址覆盖范围，只能引入子网划分，划分子网的手段其实就是<strong>向主机位借位，变主机位为网络位</strong></p><img src="https://pic.imgdb.cn/item/6177909b2ab3f51d91bcf40c.jpg" style="zoom:67%;" /></blockquote><p>举个例子：</p><blockquote><p>已知：172.16.30.10/20，请计算出这个IP地址的主机数，子网数，子网位，主机位，子网号，主机号，网络地址，广播地址，主机地址范围格式多少？</p><p>来源：<span class="exturl"><a class="exturl__link"   href="https://blog.csdn.net/wei763328075qq/article/details/103521545" >https://blog.csdn.net/wei763328075qq/article/details/103521545</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p></blockquote><p>解释一下哈，**/20代表20个网络位，子网掩码其实就是网络号全为1，主机号全为0的一串数字<strong>。所以题目中的子网掩码为：11111111.11111111.11110000.00000000。所以可以看出后面四个1 是从主机位借的，可以计算出子网的个数：</strong>2^4=16(这里不需要减2)<strong>，主机数：</strong>2^12-2=4094(这里需要减2，因为主机号不能全为0和1)**</p><p>先把172.16.30.10转化为二进制表示：10101100.00010000.00011110.00001010</p><p><strong>网关=子网掩码 &amp; IP地址</strong>(如果两个ip地址网关相同，则处于同一个子网)：10101100.00010000.00010000.00000000（172.16.16.0）</p><hr><p><strong>References:</strong></p><p><span class="exturl"><a class="exturl__link"   href="https://blog.csdn.net/weixin_34379433/article/details/86130719" >https://blog.csdn.net/weixin_34379433/article/details/86130719</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+            <tag> ip </tag>
+            
+            <tag> dns </tag>
+            
+            <tag> 子网掩码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>统计学--总结</title>
+      <link href="/2021/09/07/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%80%BB%E7%BB%93/"/>
+      <url>/2021/09/07/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<p>本篇内容总结《统计学》知识</p><span id="more"></span>        <h2 id="1-基本概念"   >          <a href="#1-基本概念" class="heading-link"><i class="fas fa-link"></i></a>1 基本概念</h2>      <p>统计步骤</p><ul><li><strong>收集数据</strong><ul><li>查看现有数据</li><li>爬虫</li><li>做实验</li></ul></li><li><strong>分析数据</strong><ul><li>计算得出对应的统计量，也可以计算事件发生概率，进而预测事件的可信度</li></ul></li><li><strong>得出结论</strong></li></ul><blockquote><p>为什么要进行可视化？</p></blockquote><ul><li>单纯的数据没法发现数据的变化趋势</li><li>通过图形可以直观感受数据的发展趋势</li></ul>        <h2 id="2-基本图表"   >          <a href="#2-基本图表" class="heading-link"><i class="fas fa-link"></i></a>2 基本图表</h2>      <p><strong>饼图</strong></p><ul><li>比较内部数据占比</li><li>缺点<ul><li>当<strong>所有分类占比相似</strong>的时候，饼图就失去了意义，可以使用条形图</li></ul></li></ul><p><strong>条形图</strong></p><ul><li>比较不同类之间的相对大小，尤其是不同分类占比相似</li><li>分类<ul><li>水平条形图</li><li>垂直条形图</li><li>堆积条形图<ul><li><img src="https://raw.githubusercontent.com/python-deathfans/tuchuang/main/20210906191433.png" alt="image-20210906191414776" style="zoom: 67%;" /></li></ul></li><li>分段条形图<ul><li><img src="https://raw.githubusercontent.com/python-deathfans/tuchuang/main/20210906191506.png" alt="image-20210906191501761" style="zoom:67%;" /></li></ul></li></ul></li></ul><p><strong>折线图</strong></p><ul><li>更好体现数据的变化趋势</li><li>只用于数值型数据的展示，通常横轴是<strong>时间</strong>，强调的是<strong>变化趋势</strong></li></ul><p><strong>直方图</strong></p><ul><li><p>每个长方形的<strong>面积</strong>和<strong>频数</strong>成正比</p></li><li><p>长方形之间没有间隔</p></li><li><p>针对<strong>宽度不等</strong>的直方图，纵轴改为<strong>频数密度</strong>，而非频数，这样面积仍为频数，即面积和频数成正比</p></li><li><p><strong>频数密度=频数/组距</strong></p></li></ul>        <h2 id="3-集中趋势的量度"   >          <a href="#3-集中趋势的量度" class="heading-link"><i class="fas fa-link"></i></a>3 集中趋势的量度</h2>      <p>均值</p><ul><li>平均数</li><li>μ</li><li><img src="https://raw.githubusercontent.com/python-deathfans/tuchuang/main/20210907085428.png" alt="image-20210907085420719" style="zoom:80%;" /></li></ul><p>如果数据向右倾斜(中位数右侧的数值较大)，则均值被拉向右侧，即均值大于中位数，反之亦然。</p><p><strong>中位数</strong>和<strong>均值</strong>都不一定出现在数据中，会因为异常值的存在而跑偏，但是<strong>众数</strong>必须是数据中的一员。</p><p><strong>全距</strong></p><ul><li>也叫<strong>极差</strong></li><li>描述的是<strong>数据的宽度</strong>，并没有描述数据在极值附近的<strong>分布情况</strong></li><li>全距=最大值-最小值</li><li>容易受异常值的影响</li></ul><p><strong>四分位数</strong></p><blockquote><p>求法类似于中位数，先将数据进行排序，然后将数据分为4份</p></blockquote><img src="https://raw.githubusercontent.com/python-deathfans/tuchuang/main/20210907094010.png" alt="image-20210907093946912" style="zoom:80%;" /><ul><li>Q3称为上四分位数<ul><li>=<strong>3n/4</strong>(n代表n个数字，即<strong>频数之和</strong>)</li><li>如果是<strong>整数</strong>，则代表下四分位数为<strong>这个位置和下个位置</strong>上的数值的均值；否则<strong>向上取整</strong>，得出对应的位置</li></ul></li><li>Q2称为中位数<ul><li>=<strong>n/2(n代表n个数字，即频数之和</strong>)</li><li>如果是<strong>整数</strong>，则代表下四分位数为<strong>这个位置和下个位置</strong>上的数值的均值；否则<strong>向上取整</strong>，得出对应的位置</li></ul></li><li>Q1称为下四分位数<ul><li>=<strong>n/4</strong>(n代表n个数字，即<strong>频数之和</strong>)</li><li>如果是<strong>整数</strong>，则代表下四分位数为<strong>这个位置和下个位置</strong>上的数值的均值；否则<strong>向上取整</strong>，得出对应的位置</li></ul></li><li>四分位距=<strong>Q3-Q1</strong><ul><li>仅使用了处于中心部位的50%的数据</li><li>无论是极大值还是极小值都被排除在外</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据分析 </tag>
+            
+            <tag> 统计学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>excel--总结</title>
       <link href="/2021/09/02/excel-%E6%80%BB%E7%BB%93/"/>
       <url>/2021/09/02/excel-%E6%80%BB%E7%BB%93/</url>
