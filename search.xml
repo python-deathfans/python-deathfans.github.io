@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>二代支付系统复习</title>
+      <link href="/2022/08/22/%E4%BA%8C%E4%BB%A3%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/"/>
+      <url>/2022/08/22/%E4%BA%8C%E4%BB%A3%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="常用名词"><a href="#常用名词" class="headerlink" title="常用名词"></a>常用名词</h2><p><strong>借记</strong></p><ul><li>增加银行资产</li><li>比如 存钱</li><li>debit</li></ul><p><strong>贷记</strong></p><ul><li>减少银行资产</li><li>比如 转账</li><li>credit</li></ul><p><strong>来账</strong></p><ul><li>receive</li><li>我行被动接收</li></ul><p><strong>往账</strong></p><ul><li>send</li><li><strong>我行主动发起</strong></li></ul><p>RTS</p><ul><li>Real Time Settlement</li><li>实时转账</li></ul><p>大额支付系统</p><ul><li><strong>hvps</strong></li></ul><p>小额支付系统</p><ul><li><strong>beps</strong></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二代支付系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>svn</title>
       <link href="/2022/08/22/svn/"/>
       <url>/2022/08/22/svn/</url>
