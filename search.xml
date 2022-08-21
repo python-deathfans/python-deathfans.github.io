@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>svn</title>
+      <link href="/2022/08/22/svn/"/>
+      <url>/2022/08/22/svn/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote><p>代码版本管理工具</p><p>可以记住每一次的修改</p><p>查看所有的修改记录</p><p>恢复到任何历史版本</p><p>甚至可以恢复已经删除的文件</p><p><strong>可以按照目录进行权限划分</strong></p></blockquote><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><blockquote><p>正常从服务器端拉取的代码是有<strong>绿色标识</strong>的</p><p>修改之后的文件，如果没有更新到服务器端，会显示<strong>红色的感叹号</strong></p></blockquote><h3 id="检出-checkout"><a href="#检出-checkout" class="headerlink" title="检出 checkout"></a>检出 checkout</h3><blockquote><p>其实就是从服务器端拉取代码</p></blockquote><h3 id="新增-add"><a href="#新增-add" class="headerlink" title="新增 add"></a>新增 add</h3><blockquote></blockquote><h3 id="提交commit"><a href="#提交commit" class="headerlink" title="提交commit"></a>提交commit</h3><blockquote><p>将本地文件提交到服务器端</p><p>同时可以编写提交记录，方便其他人员查看</p><p>类似于 git commit -m ‘record…’</p></blockquote><h3 id="更新-update"><a href="#更新-update" class="headerlink" title="更新 update"></a>更新 update</h3><blockquote><p>提交之前，可以先更新一下代码，是一个很好的习惯</p></blockquote><h3 id="历史记录"><a href="#历史记录" class="headerlink" title="历史记录"></a>历史记录</h3><h2 id="撤销和恢复"><a href="#撤销和恢复" class="headerlink" title="撤销和恢复"></a>撤销和恢复</h2><h3 id="撤销本地修改"><a href="#撤销本地修改" class="headerlink" title="撤销本地修改"></a>撤销本地修改</h3><blockquote><p>右键修改的文件，选择tor..SVN,然后单击选择<strong>SVN还原</strong></p></blockquote><h3 id="撤销已经提交内容"><a href="#撤销已经提交内容" class="headerlink" title="撤销已经提交内容"></a>撤销已经提交内容</h3><blockquote><p>查看相应的日志</p><p>找出错误修改提交的日志</p><p>右键，然后选择 <strong>复原此版本做出的修改</strong></p><p>之后再次提交到服务端</p></blockquote><h3 id="恢复到指定版本"><a href="#恢复到指定版本" class="headerlink" title="恢复到指定版本"></a>恢复到指定版本</h3><blockquote><p>查看相应的日志</p><p>右键想要恢复的版本，选择 <strong>复原到此版本</strong></p></blockquote><h2 id="添加忽略文件"><a href="#添加忽略文件" class="headerlink" title="添加忽略文件"></a>添加忽略文件</h2><blockquote><p>右键该文件</p><p>选择tor..SVN,然后选择忽略该文件</p></blockquote><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>何时会产生冲突</p><ul><li>多个人修改了<strong>同个文件的同一行</strong></li><li>无法进行合并的二进制文件</li></ul><p>怎么避免冲突？</p><ul><li>经常<strong>update</strong>同步他人的代码</li></ul><h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><p>何时需要开分支</p><ul><li>隔离线上版本和开发版本</li><li>大功能开发，不想影响到其他人，自己独立开个分支去开发</li></ul><p>经典结构</p><ul><li><strong>trunk</strong><ul><li>主干分支</li></ul></li><li><strong>branches</strong><ul><li>分支</li></ul></li><li><strong>tag</strong><ul><li>标签</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SVN </tag>
+            
+            <tag> 代码管理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C Primer Plus</title>
       <link href="/2022/08/16/C-Primer-Plus/"/>
       <url>/2022/08/16/C-Primer-Plus/</url>
