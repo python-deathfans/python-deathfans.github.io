@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux常用指令</title>
+      <link href="/2022/08/25/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+      <url>/2022/08/25/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="Vi编辑器"><a href="#Vi编辑器" class="headerlink" title="Vi编辑器"></a>Vi编辑器</h2><blockquote><p>进入命令：</p><ul><li>vi file</li><li>vim file</li><li>view file</li></ul></blockquote><p>翻页快捷键</p><ul><li>ctrl + d<ul><li>向后半页</li></ul></li><li>ctrl + u<ul><li>向前半页</li></ul></li><li>ctrl + f<ul><li>向前一页</li></ul></li><li>ctrl + b<ul><li>向后一页</li></ul></li><li>方向键</li></ul><p>三种模式</p><ul><li>命令模式<ul><li>/<ul><li>搜索</li></ul></li><li>i a d<ul><li>进入编辑模式</li></ul></li></ul></li><li>编辑模式<ul><li>输入文字</li><li>复制 删除 剪切<ul><li>yy</li><li>dd</li><li>p</li></ul></li></ul></li><li>尾部模式<ul><li>按键 esc</li><li>:set nu</li><li>:set nu!</li><li>:q</li><li>:wq</li><li>:wq!</li><li>:q!</li></ul></li></ul><p>内容搜索</p><ul><li>命令模式输入 /content<ul><li>自动定位首次出现content的位置</li><li>输入 n，跳转到下一处content位置</li><li>输入N，跳转到上一处content位置</li></ul></li></ul><h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><blockquote><p>linux中强大的<strong>文本搜索指令</strong>，可以配合<strong>正则表达式</strong>，达到高效的搜索</p></blockquote><ul><li>-l<ul><li>以指定字符串查找对应的文件名</li></ul></li><li>-i<ul><li>忽略字符大小写</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>二代支付系统复习</title>
       <link href="/2022/08/22/%E4%BA%8C%E4%BB%A3%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/"/>
       <url>/2022/08/22/%E4%BA%8C%E4%BB%A3%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/</url>
@@ -89,7 +114,7 @@
       <link href="/2022/08/16/%E4%B8%8A%E7%8F%AD%E7%94%9F%E6%B4%BB/"/>
       <url>/2022/08/16/%E4%B8%8A%E7%8F%AD%E7%94%9F%E6%B4%BB/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="第二天-2022-08-16"><a href="#第二天-2022-08-16" class="headerlink" title="第二天(2022-08-16)"></a>第二天(2022-08-16)</h2><blockquote><p>AM 5:00</p></blockquote><p>上班第二天，昨天太累了，中午没有地方睡觉，几乎没有休息。下午的时候调到了支付中心小组，C语言，任重而道远，而且属于公司次核心业务，需要非常仔细认真，容不得半点马虎。那又如何，我就不相信自己无法胜任，加油就行了，你只管努力，剩下的交给时间咯，你看，5点钟我也可以起来，还有什么没法克服的咧。</p><h2 id="第三天-2022-08-17"><a href="#第三天-2022-08-17" class="headerlink" title="第三天(2022-08-17)"></a>第三天(2022-08-17)</h2><p>上班第三天，昨天晚上回来之后有点丧，状态不太对，反正随便弄了点晚饭吃就刷起了手机，啥都不想弄，书不想看，运动也不想，最主要的还是昨天被打败到了，一个人吃饭，几乎没有人说话，工作内容也有点难顶。不过好在宝宝一直在安慰我，在鼓励我，真的好想宝儿~，感谢有你。</p><p>今天好了很多，多睡了一会觉，6点半起床，今天发生了一些有趣的事情：</p><ul><li>明天是行庆，所以今天公司发了雪糕，哈哈，还是两块，开心</li><li>中午打了会台球，加了一个人的微信，以后中午有场地和人打球咯</li><li>上午的时候还带薪做了核酸检测</li><li>晚上做了最拿手的西红柿鸡蛋面，哈哈</li><li>今天学习状态也不错，学了很多东西，很有成就感，晚上回来准备开启刷题模式啦</li></ul><h2 id="第四天-2022-08-18"><a href="#第四天-2022-08-18" class="headerlink" title="第四天(2022-08-18)"></a>第四天(2022-08-18)</h2><blockquote><p>今天是浙商银行的行庆日，中午有好多好吃的，我们浙商银行也成年啦，哈哈</p></blockquote><ul><li>中午由于有各种好吃的，所以食堂人爆满，我也就拿了块雪糕而已，哈哈，不过中午的水果是火龙果。中午吃的很开心，就是没有打成台球，哈哈，人有点多</li><li>晚上的时候为了助力浙商银行公益活动(8.18-9.18)，一天微信步数达到16000步，就可以助力公益，完成的前100名个人还有奖励咧，嘻嘻。下班回来之后就浅浅的跑了一个小时，最终的步数是15170，排名27，还可以哈，保持这个节奏，最后肯定就能够拿到奖励啦</li><li>今天组长还是没有布置啥任务，所以到点就溜啦，嘻嘻</li><li>再熬明天一天就到周末啦，不工作不知周末的可贵呀，珍惜当下，come on!</li></ul><h2 id="第一个周末-2022-08-20—2022-08-21"><a href="#第一个周末-2022-08-20—2022-08-21" class="headerlink" title="第一个周末(2022-08-20—2022-08-21)"></a>第一个周末(2022-08-20—2022-08-21)</h2><ul><li>早上起床练球，感觉周末的早上没人打球耶，以后可以每周都练练球了，这周练的是推球，之前每杆都在讲究发力，其实在自身运杆不是太稳的情况下，很容易打丢球</li><li>周六中午，做了次很成功的焖面，开心，哈哈</li><li>周六下午，一时兴起，骑车去了西湖，17.5km，用时1小时20分钟</li><li>周日上午还是去练球了，中午回来做了个饭，睡了个午觉，美美的，就是不想学习和看书，哈哈</li></ul><p><img src="https://pic.imgdb.cn/item/6302a98116f2c2beb1ab43b5.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97a16f2c2beb1ab416b.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97a16f2c2beb1ab418d.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97916f2c2beb1ab40d6.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97a16f2c2beb1ab4131.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97916f2c2beb1ab40c0.jpg"></p><h2 id="2022-08-22"><a href="#2022-08-22" class="headerlink" title="2022-08-22"></a>2022-08-22</h2><ul><li>今天4点半就起床啦，主要是给周末擦擦屁股哈哈，连着两天没有学习，今天把必须要做的事情做一下</li></ul>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="第二天-2022-08-16"><a href="#第二天-2022-08-16" class="headerlink" title="第二天(2022-08-16)"></a>第二天(2022-08-16)</h2><blockquote><p>AM 5:00</p></blockquote><p>上班第二天，昨天太累了，中午没有地方睡觉，几乎没有休息。下午的时候调到了支付中心小组，C语言，任重而道远，而且属于公司次核心业务，需要非常仔细认真，容不得半点马虎。那又如何，我就不相信自己无法胜任，加油就行了，你只管努力，剩下的交给时间咯，你看，5点钟我也可以起来，还有什么没法克服的咧。</p><h2 id="第三天-2022-08-17"><a href="#第三天-2022-08-17" class="headerlink" title="第三天(2022-08-17)"></a>第三天(2022-08-17)</h2><p>上班第三天，昨天晚上回来之后有点丧，状态不太对，反正随便弄了点晚饭吃就刷起了手机，啥都不想弄，书不想看，运动也不想，最主要的还是昨天被打败到了，一个人吃饭，几乎没有人说话，工作内容也有点难顶。不过好在宝宝一直在安慰我，在鼓励我，真的好想宝儿~，感谢有你。</p><p>今天好了很多，多睡了一会觉，6点半起床，今天发生了一些有趣的事情：</p><ul><li>明天是行庆，所以今天公司发了雪糕，哈哈，还是两块，开心</li><li>中午打了会台球，加了一个人的微信，以后中午有场地和人打球咯</li><li>上午的时候还带薪做了核酸检测</li><li>晚上做了最拿手的西红柿鸡蛋面，哈哈</li><li>今天学习状态也不错，学了很多东西，很有成就感，晚上回来准备开启刷题模式啦</li></ul><h2 id="第四天-2022-08-18"><a href="#第四天-2022-08-18" class="headerlink" title="第四天(2022-08-18)"></a>第四天(2022-08-18)</h2><blockquote><p>今天是浙商银行的行庆日，中午有好多好吃的，我们浙商银行也成年啦，哈哈</p></blockquote><ul><li>中午由于有各种好吃的，所以食堂人爆满，我也就拿了块雪糕而已，哈哈，不过中午的水果是火龙果。中午吃的很开心，就是没有打成台球，哈哈，人有点多</li><li>晚上的时候为了助力浙商银行公益活动(8.18-9.18)，一天微信步数达到16000步，就可以助力公益，完成的前100名个人还有奖励咧，嘻嘻。下班回来之后就浅浅的跑了一个小时，最终的步数是15170，排名27，还可以哈，保持这个节奏，最后肯定就能够拿到奖励啦</li><li>今天组长还是没有布置啥任务，所以到点就溜啦，嘻嘻</li><li>再熬明天一天就到周末啦，不工作不知周末的可贵呀，珍惜当下，come on!</li></ul><h2 id="第一个周末-2022-08-20—2022-08-21"><a href="#第一个周末-2022-08-20—2022-08-21" class="headerlink" title="第一个周末(2022-08-20—2022-08-21)"></a>第一个周末(2022-08-20—2022-08-21)</h2><ul><li>早上起床练球，感觉周末的早上没人打球耶，以后可以每周都练练球了，这周练的是推球，之前每杆都在讲究发力，其实在自身运杆不是太稳的情况下，很容易打丢球</li><li>周六中午，做了次很成功的焖面，开心，哈哈</li><li>周六下午，一时兴起，骑车去了西湖，17.5km，用时1小时20分钟</li><li>周日上午还是去练球了，中午回来做了个饭，睡了个午觉，美美的，就是不想学习和看书，哈哈</li></ul><p><img src="https://pic.imgdb.cn/item/6302a98116f2c2beb1ab43b5.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97a16f2c2beb1ab416b.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97a16f2c2beb1ab418d.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97916f2c2beb1ab40d6.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97a16f2c2beb1ab4131.jpg"><br><img src="https://pic.imgdb.cn/item/6302a97916f2c2beb1ab40c0.jpg"></p><h2 id="2022-08-22"><a href="#2022-08-22" class="headerlink" title="2022-08-22"></a>2022-08-22</h2><ul><li>今天4点半就起床啦，主要是给周末擦擦屁股哈哈，连着两天没有学习，今天把必须要做的事情做一下</li></ul><h2 id="2022-08-25"><a href="#2022-08-25" class="headerlink" title="2022-08-25"></a>2022-08-25</h2><blockquote><p>05点07分</p><p>继续4点半起床，吃不了自律的苦，那只能吃生活的苦。<strong>生活苦难重重，调整心态，降低心理预期，直面问题，推迟满足，最终享受人生</strong>。</p><p>唯有自律方能解决生活中的痛苦。四大原则：推迟满足、忠于事实、保持平衡、承担责任</p></blockquote>]]></content>
       
       
       <categories>
