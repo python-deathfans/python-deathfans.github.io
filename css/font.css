@@ -1,0 +1,10 @@
+
+  @font-face{
+    font-family: '字体名字';
+    
+    src: url('/QingNiaoHuaGuangYaoTi-2.ttf') format("truetype");
+}
+
+body {
+    font-family: '字体名字';
+}
