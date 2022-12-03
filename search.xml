@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>shell入门到掌握</title>
+      <link href="/2022/12/04/shell%E5%85%A5%E9%97%A8%E5%88%B0%E6%8E%8C%E6%8F%A1/"/>
+      <url>/2022/12/04/shell%E5%85%A5%E9%97%A8%E5%88%B0%E6%8E%8C%E6%8F%A1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>b站视频合集：<a href="https://space.bilibili.com/315510261/channel/collectiondetail?sid=875543">大象乔布斯的个人空间_哔哩哔哩_bilibili</a></p><h2 id="shell中各种括号的使用"><a href="#shell中各种括号的使用" class="headerlink" title="shell中各种括号的使用"></a>shell中各种括号的使用</h2><ul><li><p>{}</p><ul><li><p>用于<strong>执行命令</strong></p></li><li><p>里面可以放置一串命令，彼此使用分号隔开</p></li><li><p><strong>第一个命令和左括号之间要有空格</strong></p></li><li><p><strong>最后一个命令也要加上分号</strong></p></li><li><p>var=”zhangsan”; { echo var;var=”lisi”;echo var;var=”lisi”;echovar;var=”lisi”;echo var;var=”lisi”;echovar;}; echo $var</p></li></ul></li><li><p>()</p><ul><li><p><strong>命令集合</strong></p></li><li><p><strong>命令替换</strong> == 反引号</p></li><li><p><strong>初始化数组</strong></p><ul><li>(a b c d)</li></ul></li></ul></li><li><p>(())</p><ul><li><p>专门用来进行<strong>整数运算</strong>的命令，不能对小数或者字符串进行运算</p></li><li><p>一个或者多个都可以，<strong>中间使用,进行分隔</strong></p></li><li><p>还可以进行比较运算，<strong>自增运算</strong></p></li><li><p><strong>总之，涉及到整数数值运算的，优先使用(())</strong></p></li></ul></li><li><p>[]</p><ul><li><p>主要用于<strong>条件判断</strong></p></li><li><p>两个符号左右都需要有空格</p></li><li><p>操作变量左右也要有空格</p></li></ul></li><li><p>[[]]</p><ul><li><p>主要用于<strong>条件判断</strong></p></li><li><p>符号左右要有空格</p></li><li><p>操作变量左右也要有空格</p></li><li><p><strong>更加通用</strong></p></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shell </tag>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>贪婪的多巴胺</title>
       <link href="/2022/11/27/%E8%B4%AA%E5%A9%AA%E7%9A%84%E5%A4%9A%E5%B7%B4%E8%83%BA/"/>
       <url>/2022/11/27/%E8%B4%AA%E5%A9%AA%E7%9A%84%E5%A4%9A%E5%B7%B4%E8%83%BA/</url>
