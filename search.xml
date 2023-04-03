@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>医保那些事儿</title>
+      <link href="/2023/04/03/%E5%8C%BB%E4%BF%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
+      <url>/2023/04/03/%E5%8C%BB%E4%BF%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>今天来聊聊医保那些事。</p><p>医保两大分类</p><ul><li><p>职工医保</p><ul><li>就是我们所谓五险一金中的医疗险，一般是职工和公司共同缴纳，职工缴纳2%，公司缴纳8%。职工缴纳的进入个人医保账户，可以用于平时门诊的挂号、拿药、检查等。公司缴纳的部分进入统筹账户，主要用于住院时报销使用。</li><li>报销比例高，相应的也交的多一些</li><li>连续缴纳15年之后就可以不用缴纳，也可以享受医保报销</li><li>平均报销比例在<strong>80%</strong></li></ul></li><li><p>城乡医保</p><ul><li>对应于没有工作的那群人，可以在户籍所在地缴纳。</li><li>每年保费3 400，对应的报销比例会低一些</li><li>交一年，保一年，不交就没有保障</li><li>平均报销比例在<strong>60%</strong></li></ul></li></ul><h2 id="报销"><a href="#报销" class="headerlink" title="报销"></a>报销</h2><blockquote><p>一般来说，门诊直接走个人账户，不进行报销，只有住院费用才可以报销。但是有些地区的门诊还是可以报销的，只是有起报线和最高线</p></blockquote><ul><li>当地报销<ul><li>先使用医保卡办理住院手续，先进行垫资。最后出院，除掉统筹账户报销的，剩下的从垫资中扣取，多退少补</li></ul></li><li>异地报销<ul><li>异地先做备案，然后才可以回去报销</li><li>备案方法<ul><li>支付宝-》卡包-》电子医保卡-》异地备案-》异地备案申请</li><li>或者<ul><li>微信小程序<ul><li><strong>国家异地就医备案</strong></li></ul></li></ul></li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 医保 </tag>
+            
+            <tag> 报销 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>工资分配体系</title>
+      <link href="/2023/04/03/%E5%B7%A5%E8%B5%84%E5%88%86%E9%85%8D%E4%BD%93%E7%B3%BB/"/>
+      <url>/2023/04/03/%E5%B7%A5%E8%B5%84%E5%88%86%E9%85%8D%E4%BD%93%E7%B3%BB/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>今天介绍一下自己的工资分配系统，希望对各位看官有些帮助。</p><p>去年研究生毕业到现在工作了差不多9个月，在研究生期间，自己读了许多财务自由相关的书籍，借鉴小狗钱钱和<strong>标准普尔象限图</strong>制定了自己的工资分配系统，如下图所示：</p><p><img src="https://raw.githubusercontent.com/python-deathfans/tuchuang/main/202304031900715.jpeg" alt="img"></p><p>每月工资到了之后，先把工资转到常用的农行卡，然后留出700块钱(之前通过记账，追踪自己的消费，摸索出了最低的消费水平)，其余钱转入且慢(不是广告，主要是且慢可以创建多个账户，分别管理，非常方便，类似下图)。</p><p><img src="https://raw.githubusercontent.com/python-deathfans/tuchuang/main/202304031900974.jpeg" alt="img"></p><p>第一，房租。按季度付费，每个月转入1800(杭州的房租真贵)，买入货币基金(比余额宝和零钱通利率高一些)，苍蝇腿也是肉嘛。</p><p>第二，备用金。该账户用于应对突发事件，至少可以覆盖半年的生活费(2500*6=15000)，目前该账户已经完成了目标，不再转入。一半买入债券，一半买入货币基金，提高收益率。后续可能会补充一些商业医疗保险，每月也需要一些开支。</p><p>第三，梦想账户。这个账户厉害了，每月转入500，用于人情世故、生日礼物、奖励自己等等，这个账户里的钱消费效率巨高，幸福感很高，专户专用，没有任何负担，相反会更加幸福。如果某个月的支出超出预算，就从该账户转入对应的金额到银行卡，保证收支平衡。</p><p>第四，长盈账户。该部分才是重头戏，后续实现财务自由全靠这个账户，跟投E大的长盈S定投，每月的余钱进行投资，定投的标的是低估的指数基金，后续盈利的概率非常大，低估+定投+资产配置+再平衡是普通人致胜的法宝，买入，等待时间玫瑰的绽放，享受经济增长的红利。</p><p>以上就是 我的工资分配体系，希望对各位看官有用，如果您有更好的方案，也期待您的不吝分享。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 理财 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 理财 </tag>
+            
+            <tag> 工资分配 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>俏皮话&amp;歇后语</title>
       <link href="/2023/03/26/%E4%BF%8F%E7%9A%AE%E8%AF%9D-%E6%AD%87%E5%90%8E%E8%AF%AD/"/>
       <url>/2023/03/26/%E4%BF%8F%E7%9A%AE%E8%AF%9D-%E6%AD%87%E5%90%8E%E8%AF%AD/</url>
@@ -746,9 +800,9 @@
           
           <category> 阅读 </category>
           
-          <category> 理财 </category>
-          
           <category> 生活经济学 </category>
+          
+          <category> 理财 </category>
           
       </categories>
       
@@ -1028,9 +1082,9 @@
       
       <categories>
           
-          <category> 理财 </category>
-          
           <category> 生活经济学 </category>
+          
+          <category> 理财 </category>
           
       </categories>
       
@@ -2129,7 +2183,7 @@
       <link href="/2020/12/22/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
       <url>/2020/12/22/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>本篇记录一下git的基本操作。</p><p><img src="https://pic.downk.cc/item/5fe1c6af3ffa7d37b367d074.png"></p><span id="more"></span><h2 id="全局配置命令"><a href="#全局配置命令" class="headerlink" title="全局配置命令"></a>全局配置命令</h2><p><strong>配置全局用户名、邮箱</strong></p><ul><li>git config –global user.name</li><li>git config –global user.email</li><li>git config –global user.password</li></ul><p><strong>git config –list</strong></p><ul><li>查看配置列表</li></ul><h2 id="生成git-公钥"><a href="#生成git-公钥" class="headerlink" title="生成git 公钥"></a>生成git 公钥</h2><ul><li>ssh-keygen -t rsa -C “<a href="mailto:&#120;&#120;&#120;&#64;&#120;&#120;&#x78;&#x2e;&#x63;&#x6f;&#x6d;">&#120;&#120;&#120;&#64;&#120;&#120;&#x78;&#x2e;&#x63;&#x6f;&#x6d;</a>“</li><li>拷贝.pub文件的公钥到github</li><li>即可完成公钥的配置，免得每次push都需要输入用户名和密码</li></ul><h2 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h2><h3 id="手动创建"><a href="#手动创建" class="headerlink" title="手动创建"></a>手动创建</h3><ul><li><strong>git init</strong><ul><li>初始化仓库</li><li>生成.git文件夹</li></ul></li></ul><h3 id="自动创建"><a href="#自动创建" class="headerlink" title="自动创建"></a>自动创建</h3><ul><li>先创建远端仓库</li><li><strong>git clone 远端仓库</strong></li></ul><h2 id="本地仓库与远程仓库建立连接"><a href="#本地仓库与远程仓库建立连接" class="headerlink" title="本地仓库与远程仓库建立连接"></a>本地仓库与远程仓库建立连接</h2><ul><li>手动<ul><li><strong>git remote add origin 仓库地址</strong><ul><li>本地仓库与远端仓库建立连接</li><li>远端仓库的名字是<strong>origin</strong></li></ul></li></ul></li><li>自动<ul><li><strong>git clone 远端仓库</strong></li></ul></li><li><strong>git remote -v</strong><ul><li>查看远端仓库</li></ul></li></ul><h2 id="提交到远程仓库完整步骤"><a href="#提交到远程仓库完整步骤" class="headerlink" title="提交到远程仓库完整步骤"></a>提交到远程仓库完整步骤</h2><ul><li>创建本地仓库</li><li>本地仓库与远端仓库建立连接</li><li><strong>git add a.js</strong><ul><li>将工作区文件添加到<strong>暂存区</strong></li></ul></li><li><strong>git commit -m ‘first commit’</strong><ul><li>将暂存区文件提交到<strong>本地仓库</strong></li><li>-m 显示的是提交信息</li></ul></li><li><strong>git push  -u origin master</strong><ul><li>将本地仓库所在分支的内容提交到<strong>远端仓库的master分支</strong></li><li><strong>-u</strong> 可以在推送的同时，将<strong>origin仓库的master分支设置为本地仓库当前分支的upstream(上游)</strong>.添加了这个参数，将来运行<strong>git pull</strong>命令从远程仓库获取内容时，本地仓库的这个分支可以直接从origin的master分支获取内容，省去其他参数的麻烦。</li></ul></li></ul><h2 id="分支的概念及应用"><a href="#分支的概念及应用" class="headerlink" title="分支的概念及应用"></a>分支的概念及应用</h2><blockquote><p><strong>一个项目多人开发，我的任务需要开发一个功能，我没办法短时间内就开发测试等等一系列完成。所以我可以新建一个分支，然后把每次完成的代码都上传到这个分支里面去，最后等到所有操作都完成后，我再把这个分支整合到master中去</strong></p></blockquote><ul><li><strong>git branch</strong><ul><li>查看当前分支</li></ul></li><li><strong>git branch -a</strong><ul><li>查看本地仓库和远端仓库的所有分支</li></ul></li><li><strong>git checkout -b dev</strong><ul><li>创建dev分支并切换到dev分支，相当于下面两个指令<ul><li>git branch dev</li><li>git checkout dev</li></ul></li></ul></li><li>这个时候所作的操作都是在分支dev下的，对于master分支没有任何影响，只是最后push的时候需要注意:<strong>git push origin dev</strong>。意思是提交到远端仓库的dev分支下。</li></ul><h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>我们在dev分支下折腾完成，最终要整合到master分支：</p><ul><li><strong>git checkout master</strong><ul><li>切换到master分支</li></ul></li><li><strong>git pull origin master</strong><ul><li>将远端仓库的最新代码pull下来，因为期间<strong>其他人可能已经提交代码到远端master</strong>了，所以首先<strong>更新自己本地的master代码</strong></li></ul></li><li><strong>git merge dev</strong><ul><li>将dev分支下的操作合并到master分支下</li></ul></li></ul><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul><li>为了让我们的代码是最新的状态和提交时不发生冲突，先执行<ul><li><strong>git pull origin master</strong><ul><li>把<strong>远端仓库的master分支内容</strong>拉到本地仓库</li><li>如果使用了<strong>git push -u origin master</strong>，则可以直接使用<strong>git pull命令</strong>将远端仓库的master分支内容直接拉到本地仓库.</li></ul></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>本篇记录一下git的基本操作。</p><p><img src="https://pic.downk.cc/item/5fe1c6af3ffa7d37b367d074.png"></p><span id="more"></span><h2 id="全局配置命令"><a href="#全局配置命令" class="headerlink" title="全局配置命令"></a>全局配置命令</h2><p><strong>配置全局用户名、邮箱</strong></p><ul><li>git config –global user.name</li><li>git config –global user.email</li><li>git config –global user.password</li></ul><p><strong>git config –list</strong></p><ul><li>查看配置列表</li></ul><h2 id="生成git-公钥"><a href="#生成git-公钥" class="headerlink" title="生成git 公钥"></a>生成git 公钥</h2><ul><li>ssh-keygen -t rsa -C “<a href="mailto:&#120;&#120;&#120;&#x40;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;">&#120;&#120;&#120;&#x40;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;</a>“</li><li>拷贝.pub文件的公钥到github</li><li>即可完成公钥的配置，免得每次push都需要输入用户名和密码</li></ul><h2 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h2><h3 id="手动创建"><a href="#手动创建" class="headerlink" title="手动创建"></a>手动创建</h3><ul><li><strong>git init</strong><ul><li>初始化仓库</li><li>生成.git文件夹</li></ul></li></ul><h3 id="自动创建"><a href="#自动创建" class="headerlink" title="自动创建"></a>自动创建</h3><ul><li>先创建远端仓库</li><li><strong>git clone 远端仓库</strong></li></ul><h2 id="本地仓库与远程仓库建立连接"><a href="#本地仓库与远程仓库建立连接" class="headerlink" title="本地仓库与远程仓库建立连接"></a>本地仓库与远程仓库建立连接</h2><ul><li>手动<ul><li><strong>git remote add origin 仓库地址</strong><ul><li>本地仓库与远端仓库建立连接</li><li>远端仓库的名字是<strong>origin</strong></li></ul></li></ul></li><li>自动<ul><li><strong>git clone 远端仓库</strong></li></ul></li><li><strong>git remote -v</strong><ul><li>查看远端仓库</li></ul></li></ul><h2 id="提交到远程仓库完整步骤"><a href="#提交到远程仓库完整步骤" class="headerlink" title="提交到远程仓库完整步骤"></a>提交到远程仓库完整步骤</h2><ul><li>创建本地仓库</li><li>本地仓库与远端仓库建立连接</li><li><strong>git add a.js</strong><ul><li>将工作区文件添加到<strong>暂存区</strong></li></ul></li><li><strong>git commit -m ‘first commit’</strong><ul><li>将暂存区文件提交到<strong>本地仓库</strong></li><li>-m 显示的是提交信息</li></ul></li><li><strong>git push  -u origin master</strong><ul><li>将本地仓库所在分支的内容提交到<strong>远端仓库的master分支</strong></li><li><strong>-u</strong> 可以在推送的同时，将<strong>origin仓库的master分支设置为本地仓库当前分支的upstream(上游)</strong>.添加了这个参数，将来运行<strong>git pull</strong>命令从远程仓库获取内容时，本地仓库的这个分支可以直接从origin的master分支获取内容，省去其他参数的麻烦。</li></ul></li></ul><h2 id="分支的概念及应用"><a href="#分支的概念及应用" class="headerlink" title="分支的概念及应用"></a>分支的概念及应用</h2><blockquote><p><strong>一个项目多人开发，我的任务需要开发一个功能，我没办法短时间内就开发测试等等一系列完成。所以我可以新建一个分支，然后把每次完成的代码都上传到这个分支里面去，最后等到所有操作都完成后，我再把这个分支整合到master中去</strong></p></blockquote><ul><li><strong>git branch</strong><ul><li>查看当前分支</li></ul></li><li><strong>git branch -a</strong><ul><li>查看本地仓库和远端仓库的所有分支</li></ul></li><li><strong>git checkout -b dev</strong><ul><li>创建dev分支并切换到dev分支，相当于下面两个指令<ul><li>git branch dev</li><li>git checkout dev</li></ul></li></ul></li><li>这个时候所作的操作都是在分支dev下的，对于master分支没有任何影响，只是最后push的时候需要注意:<strong>git push origin dev</strong>。意思是提交到远端仓库的dev分支下。</li></ul><h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>我们在dev分支下折腾完成，最终要整合到master分支：</p><ul><li><strong>git checkout master</strong><ul><li>切换到master分支</li></ul></li><li><strong>git pull origin master</strong><ul><li>将远端仓库的最新代码pull下来，因为期间<strong>其他人可能已经提交代码到远端master</strong>了，所以首先<strong>更新自己本地的master代码</strong></li></ul></li><li><strong>git merge dev</strong><ul><li>将dev分支下的操作合并到master分支下</li></ul></li></ul><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul><li>为了让我们的代码是最新的状态和提交时不发生冲突，先执行<ul><li><strong>git pull origin master</strong><ul><li>把<strong>远端仓库的master分支内容</strong>拉到本地仓库</li><li>如果使用了<strong>git push -u origin master</strong>，则可以直接使用<strong>git pull命令</strong>将远端仓库的master分支内容直接拉到本地仓库.</li></ul></li></ul></li></ul>]]></content>
       
       
       <categories>
